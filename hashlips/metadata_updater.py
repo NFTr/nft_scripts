@@ -20,7 +20,6 @@ a = 0
 #opens, reads, and assigns update values from update.csv
 with open(csv_path, 'r') as changes:
     data = csv.reader(changes, delimiter = ',')
-    updates = next(data)
     for row in data:
         old_strings.append(row[0])
         new_strings.append(row[1])
