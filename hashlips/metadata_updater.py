@@ -44,7 +44,7 @@ for filename in os.listdir(json_directory_in):
                 print("original value: ", d['value'])
                 a = 0
                 while a < len(new_strings):
-                    if(d['value'].lower()) == old_strings[a].lower(): #added to ensure capital letters in the old values do not break script
+                    if(d['value'].lower().strip()) == old_strings[a].lower(): #added to ensure capital letters in the old values do not break script
                         d['value'] = new_strings[a] #updates old values to new values
                         print("new value: ", new_strings[a])
                     a = a + 1
